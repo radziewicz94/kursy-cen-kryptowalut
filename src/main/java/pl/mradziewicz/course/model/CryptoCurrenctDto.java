@@ -7,12 +7,12 @@ import java.math.BigDecimal;
 @Controller
 public class CryptoCurrenctDto {
     private String symbol;
-    private String price;
+    private BigDecimal price;
 
     CryptoCurrenctDto() {
     }
 
-    CryptoCurrenctDto(final String symbol, final String price) {
+    CryptoCurrenctDto(final String symbol, final BigDecimal price) {
         this.symbol = symbol;
         this.price = price;
     }
@@ -25,11 +25,11 @@ public class CryptoCurrenctDto {
         this.symbol = symbol;
     }
 
-    public String getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    void setPrice(final String price) {
+    void setPrice(final BigDecimal price) {
         this.price = price;
     }
 

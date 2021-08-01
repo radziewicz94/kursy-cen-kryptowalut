@@ -14,8 +14,11 @@ public class CryptoCurrency {
     @Autowired
     private GetPriceCrypto getPriceCrypto;
 
-    @GetMapping("/price")
+    @GetMapping("/")
     public String getCostCrypto(){
-        return getPriceCrypto.calculatePrice();
+        double value = Double.parseDouble(String.valueOf(getPriceCrypto.calculatePrice())) * 5_129_320.138_197_20;
+        return "Cena kupna ShibuIno " + getPriceCrypto.calculatePrice()
+        + "\n" + " Cena ogólna za ilość waluty " + value;
     }
+    //5129320.13819720
 }

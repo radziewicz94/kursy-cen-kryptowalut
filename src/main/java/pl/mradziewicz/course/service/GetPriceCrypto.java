@@ -10,11 +10,10 @@ import java.math.BigDecimal;
 @Service
 public class GetPriceCrypto {
     private CalculateService calculate = new CalculateService();
-    public static final String uri = "https://api.binance.com/api/v3/ticker/price?symbol=SHIBBUSD";
+    public static final String uri = "https://api.binance.com/api/v3/ticker/price?symbol=SHIBEUR";
 
-    public String calculatePrice(){
-        String  cena = getValueCrypto().getPrice();
-        return cena;
+    public BigDecimal calculatePrice(){
+        return getValueCrypto().getPrice();
     }
     private CryptoCurrenctDto getValueCrypto(){
         RestTemplate restTemplate = new RestTemplate();
